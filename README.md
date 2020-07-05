@@ -14,6 +14,10 @@ And then for scss management:
 ```
 npm install node-sass
 ```
+For page routing
+```
+npm install react-router-dom
+```
 
 ## Organization and Structure
 
