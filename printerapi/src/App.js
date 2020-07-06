@@ -20,6 +20,7 @@ class App extends React.Component {
         chicken.forEach(function (doc) {
           descriptions.push(doc.data().description);
           sizes.push(doc.data().size);
+          console.log(doc.id, "has the content: ", doc.data());
         });
         console.log("Descriptions: ", descriptions.join(", "));
         console.log("Sizes: ", sizes.join(", "));
