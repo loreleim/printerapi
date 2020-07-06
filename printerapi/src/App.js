@@ -16,6 +16,8 @@ class App extends React.Component {
       .collection("paper")
       .onSnapshot(function (chicken) {
         console.log("Descriptions: ", cities.join(", "));
+        const descriptions = [];
+        const sizes = [];
         console.log("Sizes: ", sizes.join(", "));
       });
   }
