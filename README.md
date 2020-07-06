@@ -18,6 +18,10 @@ For page routing
 ```
 npm install react-router-dom
 ```
+For Firebase Data Management
+```
+npm install --save firebase
+```
 
 ## Organization and Structure
 
