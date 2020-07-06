@@ -14,8 +14,6 @@ class App extends React.Component {
     firebase
       .firestore()
       .collection("paper")
-      .onSnapshot((snapshot) => {
-        debugger;
       });
   }
 
