@@ -14,6 +14,9 @@ class App extends React.Component {
     firebase
       .firestore()
       .collection("paper")
+      .onSnapshot(function (chicken) {
+        console.log("Descriptions: ", cities.join(", "));
+        console.log("Sizes: ", sizes.join(", "));
       });
   }
 
