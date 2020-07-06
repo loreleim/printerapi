@@ -19,6 +19,7 @@ class App extends React.Component {
         const sizes = [];
         chicken.forEach(function (doc) {
           descriptions.push(doc.data().description);
+          sizes.push(doc.data().size);
         });
         console.log("Descriptions: ", descriptions.join(", "));
         console.log("Sizes: ", sizes.join(", "));
