@@ -1,5 +1,5 @@
 # printerapi
-Contactless Order, Pay and Printing for Digital Printing Studios &amp; Shops
+Contactless Order, Pay and Printing for Digital Printing Studios &amp; Shops. Read the Dev Log [here](https://github.com/loreleim/printerapi/wiki/Dev-Log) 
 
 ## Creating a new react.js project
 
