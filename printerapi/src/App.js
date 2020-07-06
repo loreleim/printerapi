@@ -11,8 +11,6 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    console.log(firebase.firestore().collection("paper"));
-    console.log(firebase.database().ref("paper"));
     firebase
       .firestore()
       .collection("paper")
