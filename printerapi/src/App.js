@@ -17,6 +17,8 @@ class App extends React.Component {
       .onSnapshot(function (chicken) {
         const descriptions = [];
         const sizes = [];
+        chicken.forEach(function (doc) {
+        });
         console.log("Descriptions: ", descriptions.join(", "));
         console.log("Sizes: ", sizes.join(", "));
       });
