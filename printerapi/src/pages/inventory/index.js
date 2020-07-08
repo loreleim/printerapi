@@ -28,6 +28,7 @@ class Inventory extends React.Component {
       <div className={style.mainContainer}>
         <section className={style.heroContainer}>
           <h1>Inventory</h1>
+          {this.state.paper.map((paper) => (
             <div key={paper.id}>
               <p>{paper.id}</p>
               <p>{paper.description}</p>
