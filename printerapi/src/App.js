@@ -56,6 +56,8 @@ const App = withRouter(
   }
 );
 
+      <Router basename="/printerapi">
+      </Router>
     );
   }
 }
