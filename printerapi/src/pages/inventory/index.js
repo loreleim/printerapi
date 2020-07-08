@@ -9,6 +9,10 @@ class Inventory extends React.Component {
       paper: [],
     };
   }
+
+  componentDidMount() {
+  }
+
   render() {
     return (
       <div className={style.mainContainer}>
