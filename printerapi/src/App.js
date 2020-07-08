@@ -49,8 +49,9 @@ const App = withRouter(
               <p>{paper.size}</p>
             </div>
           ))}
-        </header>
-      </div>
+          <Switch>
+          </Switch>
+        </div>
       );
     }
   }
