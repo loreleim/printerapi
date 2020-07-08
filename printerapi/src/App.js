@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import style from "./style/index.scss";
 import firebase from "./database/firebase.js";
+import Nav from "./components/nav";
 
 class App extends React.Component {
   constructor(props) {
