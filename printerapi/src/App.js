@@ -15,6 +15,13 @@ import Inventory from "./pages/inventory";
 import Estimate from "./pages/estimate";
 
 const App = withRouter(
+  class App extends Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        paper: [],
+      };
+    }
 
   componentDidMount() {
     firebase
