@@ -17,6 +17,8 @@ class App extends React.Component {
       .onSnapshot((chicken) => {
         const firebasePaper = chicken.docs.map((doc) => ({
           id: doc.id,
+          ...doc.data(),
+        }));
       });
   }
 
