@@ -19,6 +19,7 @@ class App extends React.Component {
           id: doc.id,
           ...doc.data(),
         }));
+        this.setState({ paper: firebasePaper });
       });
   }
 
