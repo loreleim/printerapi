@@ -28,6 +28,9 @@ class Inventory extends React.Component {
       <div className={style.mainContainer}>
         <section className={style.heroContainer}>
           <h1>Inventory</h1>
+            <div key={paper.id}>
+            </div>
+          ))}
         </section>
       </div>
     );
