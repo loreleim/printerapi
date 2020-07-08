@@ -31,6 +31,7 @@ class Inventory extends React.Component {
             <div key={paper.id}>
               <p>{paper.id}</p>
               <p>{paper.description}</p>
+              <p>{paper.size}</p>
             </div>
           ))}
         </section>
