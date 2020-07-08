@@ -36,6 +36,9 @@ const App = withRouter(
       });
   }
 
+    render() {
+      return (
+        <div className={style.mainContainer}>
           <Nav></Nav>
           <p>Paper</p>
           {this.state.paper.map((paper) => (
