@@ -11,6 +11,7 @@ import Nav from "./components/nav";
 import Home from "./pages/home";
 import Order from "./pages/order";
 import Status from "./pages/status";
+import Inventory from "./pages/inventory";
 
 class App extends React.Component {
   constructor(props) {
