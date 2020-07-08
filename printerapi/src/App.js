@@ -50,6 +50,7 @@ const App = withRouter(
             </div>
           ))}
           <Switch>
+            <Route path="/" exact component={Home}></Route>
           </Switch>
         </div>
       );
