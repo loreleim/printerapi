@@ -6,7 +6,6 @@ import {
   withRouter,
 } from "react-router-dom";
 import style from "./style/index.scss";
-import firebase from "./database/firebase.js";
 import Nav from "./components/nav";
 import Home from "./pages/home";
 import Order from "./pages/order";
@@ -23,31 +22,12 @@ const App = withRouter(
       };
     }
 
-  componentDidMount() {
-    firebase
-      .firestore()
-      .collection("paper")
-      .onSnapshot((chicken) => {
-        const firebasePaper = chicken.docs.map((doc) => ({
-          id: doc.id,
-          ...doc.data(),
-        }));
-        this.setState({ paper: firebasePaper });
-      });
-  }
+    componentDidMount() {}
 
     render() {
       return (
         <div className={style.mainContainer}>
           <Nav></Nav>
-          <p>Paper</p>
-          {this.state.paper.map((paper) => (
-            <div key={paper.id}>
-              <p>{paper.id}</p>
-              <p>{paper.description}</p>
-              <p>{paper.size}</p>
-            </div>
-          ))}
           <Switch>
             <Route path="/" exact component={Home}></Route>
             <Route path="/order" component={Order}></Route>
