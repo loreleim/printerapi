@@ -31,6 +31,7 @@ class App extends React.Component {
           <p>Paper</p>
           {this.state.paper.map((paper) => (
             <div key={paper.id}>
+              <p>{paper.id}</p>
             </div>
           ))}
         </header>
