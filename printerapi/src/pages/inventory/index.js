@@ -14,6 +14,8 @@ class Inventory extends React.Component {
     firebase
       .firestore()
       .collection("paper")
+      .onSnapshot((chicken) => {
+      });
   }
 
   render() {
