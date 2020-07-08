@@ -41,6 +41,7 @@ const App = withRouter(
       <div className="App">
         <header className="App-header">
           <p>Home</p>
+          <Nav></Nav>
           <p>Paper</p>
           {this.state.paper.map((paper) => (
             <div key={paper.id}>
