@@ -66,3 +66,4 @@ class RoutedApp extends Component {
   }
 }
 
+export default RoutedApp;
