@@ -10,6 +10,7 @@ import firebase from "./database/firebase.js";
 import Nav from "./components/nav";
 import Home from "./pages/home";
 import Order from "./pages/order";
+import Status from "./pages/status";
 
 class App extends React.Component {
   constructor(props) {
