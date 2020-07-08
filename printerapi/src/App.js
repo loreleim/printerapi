@@ -1,4 +1,10 @@
 import React, { Component } from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  withRouter,
+} from "react-router-dom";
 import style from "./style/index.scss";
 import firebase from "./database/firebase.js";
 
