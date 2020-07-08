@@ -1,5 +1,6 @@
 import React from "react";
 import style from "./index.module.scss";
+import firebase from "../../database/firebase";
 
 class Inventory extends React.Component {
   render() {
