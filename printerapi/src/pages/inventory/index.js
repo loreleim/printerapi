@@ -15,6 +15,8 @@ class Inventory extends React.Component {
       .firestore()
       .collection("paper")
       .onSnapshot((chicken) => {
+        const firebasePaper = chicken.docs.map((doc) => ({
+        }));
       });
   }
 
