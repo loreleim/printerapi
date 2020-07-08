@@ -14,13 +14,7 @@ import Status from "./pages/status";
 import Inventory from "./pages/inventory";
 import Estimate from "./pages/estimate";
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      paper: [],
-    };
-  }
+const App = withRouter(
 
   componentDidMount() {
     firebase
@@ -50,6 +44,11 @@ class App extends React.Component {
           ))}
         </header>
       </div>
+      );
+    }
+  }
+);
+
     );
   }
 }
