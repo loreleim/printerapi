@@ -22,7 +22,10 @@ For Firebase Data Management
 ```
 npm install --save firebase
 ```
-
+For navigating amongst pages
+```
+npm install react-router-dom
+```
 ## Organization and Structure
 
 Within the src folder please create the following folders:
