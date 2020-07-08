@@ -32,6 +32,7 @@ class App extends React.Component {
           {this.state.paper.map((paper) => (
             <div key={paper.id}>
               <p>{paper.id}</p>
+              <p>{paper.description}</p>
             </div>
           ))}
         </header>
