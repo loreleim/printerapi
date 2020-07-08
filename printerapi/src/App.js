@@ -51,6 +51,10 @@ const App = withRouter(
           ))}
           <Switch>
             <Route path="/" exact component={Home}></Route>
+            <Route path="/order" component={Order}></Route>
+            <Route path="/status" component={Status}></Route>
+            <Route path="/inventory" component={Inventory}></Route>
+            <Route path="/estimate" component={Estimate}></Route>
           </Switch>
         </div>
       );
