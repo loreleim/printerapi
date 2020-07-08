@@ -3,6 +3,8 @@ import style from "./index.module.scss";
 import firebase from "../../database/firebase";
 
 class Inventory extends React.Component {
+  constructor(props) {
+    super(props);
     this.state = {
       paper: [],
     };
