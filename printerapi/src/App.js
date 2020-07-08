@@ -8,6 +8,7 @@ import {
 import style from "./style/index.scss";
 import firebase from "./database/firebase.js";
 import Nav from "./components/nav";
+import Home from "./pages/home";
 
 class App extends React.Component {
   constructor(props) {
