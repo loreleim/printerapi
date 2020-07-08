@@ -12,6 +12,7 @@ class Inventory extends React.Component {
 
   componentDidMount() {
     firebase
+      .firestore()
   }
 
   render() {
