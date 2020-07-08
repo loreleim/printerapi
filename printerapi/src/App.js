@@ -56,7 +56,11 @@ const App = withRouter(
   }
 );
 
+class RoutedApp extends Component {
+  render() {
+    return (
       <Router basename="/printerapi">
+        <App />
       </Router>
     );
   }
