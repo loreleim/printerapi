@@ -7,7 +7,6 @@ class App extends React.Component {
     super(props);
     this.state = {
       paper: [],
-      yeah: [],
     };
   }
 
@@ -45,6 +44,8 @@ class App extends React.Component {
           <p>Paper</p>
           <p>{this.state.paper}</p>
           <p>{this.state.yeah.id}</p>
+            <div key={paper.id}>
+            </div>
         </header>
       </div>
     );
