@@ -40,6 +40,11 @@ const App = withRouter(
               <Route path="/estimate" component={Estimate}></Route>
               <Route exact path="/login" component={Login}></Route>
               <Route exact path="/signup" component={Signup}></Route>
+              <PrivateRoute
+                exact
+                path="/dashboard"
+                component={Dashboard}
+              ></PrivateRoute>
             </Switch>
           </AuthProvider>
         </div>
