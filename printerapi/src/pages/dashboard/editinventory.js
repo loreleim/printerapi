@@ -55,3 +55,11 @@ export default class EditInventory extends PureComponent {
     return (
       <div>
         <h2>Welcome to the StockRoom</h2>
+        <label>
+          What is the GSM of the Paper?
+          <input
+            type="number"
+            name={"NewWeight"}
+            onChange={this.handleChange}
+          ></input>
+        </label>
