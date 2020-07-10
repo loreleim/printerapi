@@ -15,3 +15,17 @@ export default class EditInventory extends PureComponent {
       NewUses: [],
       NewWeight: 0,
     };
+  }
+
+  componentDidMount() {
+    firebase
+      .firestore()
+      .collection("paper")
+      .onSnapshot((chicken) => {
+        const firebasePaper = chicken.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        this.setState({ paper: firebasePaper });
+      });
+  }
