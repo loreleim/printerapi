@@ -56,6 +56,7 @@ export default class EditInventory extends PureComponent {
       <div>
         <h2>Welcome to the StockRoom</h2>
         {this.state.paper.map((paper) => (
+          <div key={paper.id} className={style.paperCard}>
           </div>
         ))}
         <label>
