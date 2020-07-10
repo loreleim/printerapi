@@ -64,6 +64,22 @@ export default class EditInventory extends PureComponent {
           ></input>
         </label>
         <label>
+          How Many Reams In Stock?
+          <input
+            type="text"
+            name={"NewReams"}
+            onChange={this.handleChange}
+          ></input>
+        </label>
+        <label>
+          How Many Sheets in a Ream?
+          <input
+            type="text"
+            name={"NewSheetsPerReam"}
+            onChange={this.handleChange}
+          ></input>
+        </label>
+        <label>
           What do people use this paper for?
           <input
             type="text"
