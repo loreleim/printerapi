@@ -64,6 +64,14 @@ export default class EditInventory extends PureComponent {
           ></input>
         </label>
         <label>
+          Description
+          <input
+            type="text"
+            name={"NewDescription"}
+            onChange={this.handleChange}
+          ></input>
+        </label>
+        <label>
           How Many Reams In Stock?
           <input
             type="text"
