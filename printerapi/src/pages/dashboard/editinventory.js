@@ -29,6 +29,21 @@ export default class EditInventory extends PureComponent {
         this.setState({ paper: firebasePaper });
       });
   }
+
+  addPaper = () => {
+    firebase
+      .firestore()
+      .collection("paper")
+      .doc(`${this.state.PaperName}`)
+      .set({
+        description: `${this.state.NewDescription}`,
+        reams: `${this.state.NewReams}`,
+        sheetsPerReam: `${this.state.NewSheetsPerReam}`,
+        uses: `${this.state.NewUses}`,
+        weight: `${this.state.NewWeight}`,
+      });
+  };
+
   handleChange = (e) => {
     const name = e.target.name;
     this.setState({ [name]: e.target.value });
