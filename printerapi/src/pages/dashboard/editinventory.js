@@ -29,3 +29,4 @@ export default class EditInventory extends PureComponent {
         this.setState({ paper: firebasePaper });
       });
   }
+  handleChange = (e) => {
