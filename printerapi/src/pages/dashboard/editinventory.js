@@ -47,5 +47,11 @@ export default class EditInventory extends PureComponent {
   handleChange = (e) => {
     const name = e.target.name;
     this.setState({ [name]: e.target.value });
+  };
+
+  render() {
     console.log("PaperName: " + this.state.PaperName);
     console.log("New Description: " + this.state.NewDescription);
+    return (
+      <div>
+        <h2>Welcome to the StockRoom</h2>
