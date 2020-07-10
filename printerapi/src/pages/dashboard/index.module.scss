@@ -5,3 +5,18 @@
   width: 100%;
 }
 
+.paperCard {
+  max-width: 500px;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  background-color: $dmLight;
+  padding: 1rem;
+}
+
+.paperCard h2 {
+  color: white;
+}
+
+label {
+  display: block;
+}
