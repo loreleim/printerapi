@@ -3,6 +3,8 @@ import style from "./index.module.scss";
 import firebase from "../../database/firebase";
 
 export default class EditInventory extends PureComponent {
+  constructor(props) {
+    super(props);
     this.state = {
       paper: [],
       newpaperid: "",
