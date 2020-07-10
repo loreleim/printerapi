@@ -103,3 +103,8 @@ export default class EditInventory extends PureComponent {
             onChange={this.handleChange}
           ></input>
         </label>
+        <div className={style.navSpacer}></div>
+      </div>
+    );
+  }
+}
