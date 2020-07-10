@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import style from "./index.module.scss";
 
 class Home extends React.Component {
@@ -6,6 +6,7 @@ class Home extends React.Component {
     return (
       <div className={style.mainContainer}>
         <section className={style.heroContainer}>
+        <section className={style.homeContainer}>
           <h1>Home</h1>
         </section>
       </div>
