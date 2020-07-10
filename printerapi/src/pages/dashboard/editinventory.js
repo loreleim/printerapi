@@ -114,6 +114,7 @@ export default class EditInventory extends PureComponent {
             onChange={this.handleChange}
           ></input>
         </label>
+        <button onClick={this.addPaper}>Add New Paper</button>
         <div className={style.navSpacer}></div>
       </div>
     );
