@@ -1,5 +1,6 @@
 import React from "react";
 import style from "./index.module.scss";
+import { AuthContext } from "../../database/auth";
 import firebase from "../../database/firebase";
 import EditInventory from "./editinventory";
 
