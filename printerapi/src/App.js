@@ -5,6 +5,7 @@ import {
   Route,
   withRouter,
 } from "react-router-dom";
+import { AuthProvider } from "./database/auth";
 import PrivateRoute from "./database/privateroute";
 import style from "./style/index.scss";
 import Nav from "./components/nav";
