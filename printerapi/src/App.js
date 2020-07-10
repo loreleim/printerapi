@@ -12,6 +12,9 @@ import Order from "./pages/order";
 import Status from "./pages/status";
 import Inventory from "./pages/inventory";
 import Estimate from "./pages/estimate";
+import Login from "./pages/login";
+import Signup from "./pages/signup";
+import Dashboard from "./pages/dashboard";
 
 const App = withRouter(
   class App extends Component {
@@ -35,6 +38,15 @@ const App = withRouter(
             <Route path="/inventory" component={Inventory}></Route>
             <Route path="/estimate" component={Estimate}></Route>
           </Switch>
+            <Switch>
+              <Route path="/" exact component={Home}></Route>
+              <Route path="/order" component={Order}></Route>
+              <Route path="/status" component={Status}></Route>
+              <Route path="/inventory" component={Inventory}></Route>
+              <Route path="/estimate" component={Estimate}></Route>
+              <Route exact path="/login" component={Login}></Route>
+              <Route exact path="/signup" component={Signup}></Route>
+            </Switch>
         </div>
       );
     }
