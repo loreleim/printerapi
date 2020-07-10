@@ -56,6 +56,14 @@ export default class EditInventory extends PureComponent {
       <div>
         <h2>Welcome to the StockRoom</h2>
         <label>
+          What do people use this paper for?
+          <input
+            type="text"
+            name={"NewUses"}
+            onChange={this.handleChange}
+          ></input>
+        </label>
+        <label>
           What is the GSM of the Paper?
           <input
             type="number"
