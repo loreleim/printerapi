@@ -1,5 +1,6 @@
 import React from "react";
 import style from "./index.module.scss";
+import firebase from "../../database/firebase";
 import EditInventory from "./editinventory";
 
 class Dashboard extends React.Component {
@@ -8,6 +9,7 @@ class Dashboard extends React.Component {
       <div className={style.mainContainer}>
         <section className={style.dashContainer}>
           <h1>Dashboard</h1>
+          <button onClick={() => firebase.auth().signOut()}>Sign out</button>
           <EditInventory></EditInventory>
         </section>
       </div>
