@@ -31,6 +31,7 @@ const App = withRouter(
       return (
         <div className={style.mainContainer}>
           <Nav></Nav>
+          <AuthProvider>
             <Switch>
               <Route path="/" exact component={Home}></Route>
               <Route path="/order" component={Order}></Route>
@@ -40,6 +41,7 @@ const App = withRouter(
               <Route exact path="/login" component={Login}></Route>
               <Route exact path="/signup" component={Signup}></Route>
             </Switch>
+          </AuthProvider>
         </div>
       );
     }
