@@ -20,6 +20,10 @@ class Dashboard extends React.Component {
           <UserData></UserData>
           <button onClick={() => firebase.auth().signOut()}>Sign out</button>
           <EditInventory></EditInventory>
+          {this.state.addPaper && <AddPaper></AddPaper>}
+          <button onClick={this.addPaperToggle}>Add New Paper Toggle</button>
+          {this.state.on && <AddUser></AddUser>}
+          <button onClick={this.toggle}>Toggle New User</button>
         </section>
       </div>
     );
