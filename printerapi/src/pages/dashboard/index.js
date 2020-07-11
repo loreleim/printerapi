@@ -5,6 +5,11 @@ import EditInventory from "./editinventory";
 import UserData from "./userdata";
 
 class Dashboard extends React.Component {
+  toggle = () => {
+    this.setState({
+      on: !this.state.on,
+    });
+  };
 
   addPaperToggle = () => {
     this.setState({
