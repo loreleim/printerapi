@@ -22,3 +22,11 @@ export default class UserData extends PureComponent {
       });
   }
 
+  render() {
+    return (
+      <div>
+        <h2>Hi, {this.state.user}</h2>
+      </div>
+    );
+  }
+}
