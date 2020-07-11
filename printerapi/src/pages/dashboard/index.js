@@ -25,6 +25,7 @@ class Dashboard extends React.Component {
           {this.state.on && <AddUser></AddUser>}
           <button onClick={this.toggle}>Toggle New User</button>
         </section>
+        <div className={style.navSpacer}></div>
       </div>
     );
   }
