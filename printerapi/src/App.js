@@ -15,7 +15,6 @@ import Status from "./pages/status";
 import Inventory from "./pages/inventory";
 import Estimate from "./pages/estimate";
 import Login from "./pages/login";
-import Signup from "./pages/signup";
 import Dashboard from "./pages/dashboard";
 
 const App = withRouter(
@@ -41,7 +40,6 @@ const App = withRouter(
               <Route path="/inventory" component={Inventory}></Route>
               <Route path="/estimate" component={Estimate}></Route>
               <Route exact path="/login" component={Login}></Route>
-              <Route exact path="/signup" component={Signup}></Route>
               <PrivateRoute
                 exact
                 path="/dashboard"
