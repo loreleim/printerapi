@@ -1,5 +1,15 @@
 @import "../../style/variables.scss";
 
+.dashContainer {
+  width: 100%;
+  height: 100vh;
+  background: $dmBackground;
+}
+
+.dashContainer .light {
+  background: $lmBackground;
+}
+
 .navSpacer {
   height: 10vh;
   width: 100%;
