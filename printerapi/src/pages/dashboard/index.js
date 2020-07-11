@@ -3,6 +3,8 @@ import style from "./index.module.scss";
 import firebase from "../../database/firebase";
 import EditInventory from "./editinventory";
 import UserData from "./userdata";
+import AddPaper from "./addpaper";
+import AddUser from "./adduser";
 
 class Dashboard extends React.Component {
   state = {
