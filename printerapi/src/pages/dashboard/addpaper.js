@@ -13,6 +13,7 @@ export default class AddPaper extends PureComponent {
       NewSheetsPerReam: 0,
       NewUses: [],
       NewWeight: 0,
+      Price: 0,
     };
   }
   addPaper = () => {
