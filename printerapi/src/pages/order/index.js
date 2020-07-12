@@ -20,6 +20,7 @@ export default class Order extends React.Component {
         firstname: `${this.state.FirstName}`,
         lastname: `${this.state.LastName}`,
         oasis: `${this.state.Oasis}`,
+        status: "awaiting approval",
       });
     e.preventDefault();
   };
