@@ -13,7 +13,6 @@ import Home from "./pages/home";
 import Order from "./pages/order";
 import Status from "./pages/status";
 import Inventory from "./pages/inventory";
-import Estimate from "./pages/estimate";
 import Login from "./pages/login";
 import Dashboard from "./pages/dashboard";
 
@@ -38,7 +37,6 @@ const App = withRouter(
               <Route path="/order" component={Order}></Route>
               <Route path="/status" component={Status}></Route>
               <Route path="/inventory" component={Inventory}></Route>
-              <Route path="/estimate" component={Estimate}></Route>
               <Route exact path="/login" component={Login}></Route>
               <PrivateRoute
                 exact

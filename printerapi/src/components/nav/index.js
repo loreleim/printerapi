@@ -40,9 +40,6 @@ export default class Nav extends PureComponent {
               <li>
                 <Link to={"/inventory"}>Inventory</Link>
               </li>
-              <li>
-                <Link to={"/estimate"}>Estimate</Link>
-              </li>
             </ul>
           </nav>
         ) : (
@@ -61,42 +58,10 @@ export default class Nav extends PureComponent {
               <li>
                 <Link to={"/inventory"}>Inventory</Link>
               </li>
-              <li>
-                <Link to={"/estimate"}>Estimate</Link>
-              </li>
             </ul>
           </nav>
         )}
       </div>
-      /*<div>
-        <nav
-          className={style.mainNav}
-          style={{
-            visibility: this.props.visibility,
-            opacity: this.props.opacity,
-            height: this.props.height,
-          }}
-        >
-          <ul>
-            <li>{this.state.message}</li>
-            <li>
-              <Link to={"/"}>Home</Link>
-            </li>
-            <li>
-              <Link to={"/order"}>Order</Link>
-            </li>
-            <li>
-              <Link to={"/status"}>Status</Link>
-            </li>
-            <li>
-              <Link to={"/inventory"}>Inventory</Link>
-            </li>
-            <li>
-              <Link to={"/estimate"}>Estimate</Link>
-            </li>
-          </ul>
-        </nav>
-      </div>*/
     );
   }
 }
