@@ -85,6 +85,14 @@ export default class AddPaper extends PureComponent {
             onChange={this.handleChange}
           ></input>
         </label>
+        <label>
+          What is the price per sheet/sq. foot?
+          <input
+            type="number"
+            name={"Price"}
+            onChange={this.handleChange}
+          ></input>
+        </label>
         <button onClick={this.addPaper}>Add New Paper</button>
         <div className={style.navSpacer}></div>
       </div>
