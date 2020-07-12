@@ -7,6 +7,8 @@ class Inventory extends React.Component {
     super(props);
     this.state = {
       paper: [],
+      suggestions: [],
+      test: ["test", "something"],
     };
   }
 
@@ -23,6 +25,30 @@ class Inventory extends React.Component {
       });
   }
 
+  textChange = (e) => {
+    const value = e.target.value;
+    let suggestions = [];
+    if (value.length > 0) {
+      const regex = new RegExp(`^${value}`, "i");
+      suggestions = this.state.test.sort().filter((v) => regex.test(v));
+    }
+    this.setState(() => ({ suggestions }));
+  };
+
+  renderMatches() {
+    const { suggestions } = this.state;
+    if (suggestions.length === 0) {
+      return null;
+    }
+    return (
+      <div>
+        {suggestions.map((test) => (
+          <li>{test}</li>
+        ))}
+      </div>
+    );
+  }
+
   render() {
     return (
       <div className={style.mainContainer}>
@@ -35,6 +61,8 @@ class Inventory extends React.Component {
               <p>{paper.size}</p>
             </div>
           ))}
+          <input type="text" onChange={this.textChange}></input>
+          {this.renderMatches()}
         </section>
       </div>
     );
