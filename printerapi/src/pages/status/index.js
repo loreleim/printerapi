@@ -21,6 +21,7 @@ class Status extends React.Component {
       .onSnapshot((doc) => {
         const replace = doc.data().status;
         this.setState({ orderStatus: replace });
+        if (snapshot.exists) {
       });
     e.preventDefault();
   };
