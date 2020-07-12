@@ -25,7 +25,8 @@ export default class AddPaper extends PureComponent {
         reams: `${this.state.NewReams}`,
         sheetsPerReam: `${this.state.NewSheetsPerReam}`,
         uses: `${this.state.NewUses}`,
-        weight: `${this.state.NewWeight}`,
+        weight: this.state.NewWeight,
+        price: this.state.Price,
       });
   };
 
