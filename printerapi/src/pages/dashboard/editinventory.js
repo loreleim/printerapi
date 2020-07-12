@@ -38,6 +38,7 @@ export default class EditInventory extends PureComponent {
             <p>Sheets in Stock: {paper.sheetsPerReam * paper.reams}</p>
             <p>Uses: {paper.uses}</p>
             <p>Weight: {paper.weight}</p>
+            <p>Price: ${paper.price}</p>
           </div>
         ))}
       </div>
