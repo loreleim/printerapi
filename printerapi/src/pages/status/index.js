@@ -18,10 +18,13 @@ class Status extends React.Component {
       .firestore()
       .collection("orders")
       .doc(`${this.state.OrderNumber}`)
-      .onSnapshot((doc) => {
-        const replace = doc.data().status;
-        this.setState({ orderStatus: replace });
+      .onSnapshot((snapshot) => {
         if (snapshot.exists) {
+          const replace = snapshot.data().status;
+          this.setState({ orderStatus: replace });
+        } else {
+          this.setState({ orderStatus: "no orders found" });
+        }
       });
     e.preventDefault();
   };
@@ -29,13 +32,9 @@ class Status extends React.Component {
   handleChange = (e) => {
     const name = e.target.name;
     this.setState({ [name]: e.target.value });
-    console.log(this.state.OrderNumber);
   };
 
   renderMatches() {
-    if (this.state.orderStatus.length === 0) {
-      return null;
-    }
     return <div>{this.state.orderStatus}</div>;
   }
 
