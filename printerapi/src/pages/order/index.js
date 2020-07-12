@@ -9,6 +9,7 @@ export default class Order extends React.Component {
       FirstName: "",
       LastName: "",
       Oasis: "",
+      fileInputs: [],
     };
   }
   newOrder = (e) => {
@@ -24,6 +25,16 @@ export default class Order extends React.Component {
       });
     e.preventDefault();
   };
+
+  addFile = () => {
+    this.setState({ fileInputs: [...this.state.fileInputs, ""] });
+  };
+
+  removeFile = (index) => {
+    this.state.fileInputs.splice(index, 1);
+    this.setState({ fileInputs: this.state.fileInputs });
+  };
+
   handleChange = (e) => {
     const name = e.target.name;
     this.setState({ [name]: e.target.value });
@@ -62,14 +73,16 @@ export default class Order extends React.Component {
               Upload PDF
               <input name={"File"} type="file" accept="application/pdf" />
             </label>
-            <label for="cars">What Order Type Are you Doing?</label>
-            <select name="carlist" form="carform">
-              <option value="regular">Regular Cut Sheet</option>
-              <option value="book">Perfect Bound Book</option>
-              <option value="businesscard">Business Card</option>
-              <option value="photomural">Photo Mural</option>
-              <option value="scan">Scan</option>
-            </select>
+
+            {this.state.fileInputs.map((file) => (
+              <div key={file.id}>
+                <input value={file}></input>
+                <button onClick={this.removeFile}>Remove</button>
+              </div>
+            ))}
+            <button classname={style.addButton} onClick={this.addFile}>
+              Add File
+            </button>
             <button type="submit">Place Order</button>
           </form>
         </section>
