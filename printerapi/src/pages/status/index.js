@@ -23,7 +23,7 @@ class Status extends React.Component {
           const replace = snapshot.data().status;
           this.setState({ orderStatus: replace });
         } else {
-          this.setState({ orderStatus: "no orders found" });
+          this.setState({ orderStatus: "That order does not exist" });
         }
       });
     e.preventDefault();
