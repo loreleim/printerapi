@@ -32,13 +32,13 @@ export default class Nav extends PureComponent {
                 <Link to={"/dashboard"}>Dashboard</Link>
               </li>
               <li>
-                <Link to={"/order"}>Order</Link>
+                <Link to={"/order"}>New Order</Link>
               </li>
               <li>
-                <Link to={"/status"}>Status</Link>
+                <Link to={"/status"}>Workflow</Link>
               </li>
               <li>
-                <Link to={"/inventory"}>Inventory</Link>
+                <Link to={"/inventory"}>Settings</Link>
               </li>
             </ul>
           </nav>
@@ -57,6 +57,9 @@ export default class Nav extends PureComponent {
               </li>
               <li>
                 <Link to={"/inventory"}>Inventory</Link>
+              </li>
+              <li>
+                <Link to={"/about"}>About</Link>
               </li>
             </ul>
           </nav>
