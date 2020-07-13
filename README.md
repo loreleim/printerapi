@@ -42,7 +42,7 @@ Remove the following default files:
 3. logo.svg (remove the import on the App.js file, and the html reference in the render <img> tag)
 4. App.test.js
 
-Now for some renaming, this repo follows a lowercase-lowercase naming convention. Folder files with two works shall be conjoined with a hyphen, -. .JS files with two works shall follow a lowercaseUppercase.js naming system. Rename the following default files:
+Now for some renaming, this repo follows a lowercase-lowercase naming convention. Folders with two words shall be conjoined with a hyphen "-" .JS files with two words shall follow a lowercaseUppercase.js naming system. Rename the following default files:
 
 1. App.css to app.css (also move to an index.scss file in the style folder)
 2. App.js to app.js
