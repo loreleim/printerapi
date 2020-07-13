@@ -11,6 +11,7 @@ import style from "./style/index.scss";
 import Nav from "./components/nav";
 import Home from "./pages/home";
 import Order from "./pages/order";
+import Confirmation from "./pages/confirmation";
 import Status from "./pages/status";
 import Inventory from "./pages/inventory";
 import Login from "./pages/login";
@@ -35,6 +36,7 @@ const App = withRouter(
             <Switch>
               <Route path="/" exact component={Home}></Route>
               <Route path="/order" component={Order}></Route>
+              <Route path="/confirmation" component={Confirmation}></Route>
               <Route path="/status" component={Status}></Route>
               <Route path="/inventory" component={Inventory}></Route>
               <Route exact path="/login" component={Login}></Route>
