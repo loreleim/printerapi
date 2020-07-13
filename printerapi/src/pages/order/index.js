@@ -1,6 +1,8 @@
 import React from "react";
 import style from "./index.module.scss";
 import firebase from "../../database/firebase";
+import { Redirect } from "react-router-dom";
+import storage from "../../database";
 
 export default class Order extends React.Component {
   constructor(props) {
@@ -10,20 +12,34 @@ export default class Order extends React.Component {
       LastName: "",
       Oasis: "",
       fileInputs: [],
+      redirect: false,
     };
   }
+
+  storage = this.props;
+
   newOrder = (e) => {
+    const oof = this.state.LastName + this.state.Oasis;
     firebase
       .firestore()
       .collection("orders")
-      .doc()
+      .doc(oof)
       .set({
         firstname: `${this.state.FirstName}`,
         lastname: `${this.state.LastName}`,
         oasis: `${this.state.Oasis}`,
         status: "awaiting approval",
       });
+    storage.orderNum = oof;
     e.preventDefault();
+
+    this.setState({ redirect: true });
+  };
+
+  loadConfirm = () => {
+    if (this.state.redirect) {
+      return <Redirect to="/confirmation" />;
+    }
   };
 
   addFile = () => {
@@ -42,6 +58,7 @@ export default class Order extends React.Component {
   render() {
     return (
       <div className={style.mainContainer}>
+        {this.loadConfirm()}
         <section className={style.heroContainer}>
           <h1>Place an Order</h1>
           <form onSubmit={this.newOrder}>
@@ -69,14 +86,13 @@ export default class Order extends React.Component {
                 onChange={this.handleChange}
               />
             </label>
-            <label>
-              Upload PDF
-              <input name={"File"} type="file" accept="application/pdf" />
-            </label>
 
             {this.state.fileInputs.map((file) => (
               <div key={file.id}>
                 <input value={file}></input>
+                <label>
+                  <input name={"File"} type="file" accept="application/pdf" />
+                </label>
                 <button onClick={this.removeFile}>Remove</button>
               </div>
             ))}
