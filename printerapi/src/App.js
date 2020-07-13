@@ -16,6 +16,7 @@ import Status from "./pages/status";
 import Inventory from "./pages/inventory";
 import Login from "./pages/login";
 import Dashboard from "./pages/dashboard";
+import About from "./pages/about";
 
 const App = withRouter(
   class App extends Component {
@@ -39,6 +40,7 @@ const App = withRouter(
               <Route path="/confirmation" component={Confirmation}></Route>
               <Route path="/status" component={Status}></Route>
               <Route path="/inventory" component={Inventory}></Route>
+              <Route path="/about" component={About}></Route>
               <Route exact path="/login" component={Login}></Route>
               <PrivateRoute
                 exact
