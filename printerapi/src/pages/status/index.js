@@ -40,8 +40,8 @@ class Status extends React.Component {
 
   render() {
     return (
-      <div className={style.statusContainer}>
-        <section className={style.heroContainer}>
+      <div className={style.mainContainer}>
+        <section className={style.statusContainer}>
           <h1>View Order Status</h1>
           <form onSubmit={this.searchStatus}>
             <label>

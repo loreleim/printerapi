@@ -6,7 +6,7 @@ class Home extends React.Component {
     return (
       <div className={style.mainContainer}>
         <section className={style.homeContainer}>
-          <h1>Home</h1>
+          <h1>Contactless Pay &amp; Print</h1>
         </section>
       </div>
     );

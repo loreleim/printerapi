@@ -1,0 +1,59 @@
+@import "../../style/variables.scss";
+
+.mainNav {
+  height: 80vh;
+  background-color: $magenta;
+  color: white;
+  width: 100%;
+  align-items: center;
+  position: fixed;
+  font-family: museo-sans, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  top: 0;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  transition: opacity 0.35s, visibility 0.35s, height 0.35s;
+  overflow: hidden;
+  z-index: 50;
+}
+
+.mainNav a {
+  color: white;
+  text-decoration: none;
+}
+
+.mainNav li:hover {
+  transition: 0.5s ease-in-out;
+  letter-spacing: 0.7rem;
+}
+
+.mainNav ul {
+  display: block;
+  list-style: none;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.mainNav li {
+  display: block;
+  padding-bottom: 2rem;
+  cursor: pointer;
+}
+
+//Larger than tablet (also point when grid becomes active) */
+//@media (min-width: 550px)
+
+//Larger than tablet
+//@media (min-width: 750px)
+
+//Larger than desktop
+//@media (min-width: 1000px)
+
+//Larger than Desktop HD
+//@media (min-width: 1200px)
+
+//For Screens & Mac
+//@media (min-width: 2000px)

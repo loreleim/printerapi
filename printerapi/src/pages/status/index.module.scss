@@ -1,0 +1,29 @@
+@import "../../style/variables.scss";
+
+.mainContainer {
+  width: 100%;
+  height: 100vh;
+  background-color: $dmBackground;
+}
+
+.statusContainer h1 {
+  color: white;
+}
+
+.statusContainer {
+  width: 100%;
+  position: relative;
+  top: 50%;
+  left: 0%;
+  transform: translate(0%, -50%);
+  text-align: center;
+}
+
+.statusContainer button {
+  margin: 0 auto;
+  text-align: center;
+}
+
+button {
+  display: block;
+}

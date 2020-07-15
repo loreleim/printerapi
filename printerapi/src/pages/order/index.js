@@ -59,7 +59,7 @@ export default class Order extends React.Component {
     return (
       <div className={style.mainContainer}>
         {this.loadConfirm()}
-        <section className={style.heroContainer}>
+        <section className={style.orderContainer}>
           <h1>Place an Order</h1>
           <form onSubmit={this.newOrder}>
             <label>

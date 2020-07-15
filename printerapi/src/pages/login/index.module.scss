@@ -6,11 +6,11 @@
   background-color: $dmBackground;
 }
 
-.aboutContainer h1 {
+.loginContainer h1 {
   color: white;
 }
 
-.aboutContainer {
+.loginContainer {
   width: 100%;
   position: relative;
   top: 50%;
@@ -19,7 +19,8 @@
   text-align: center;
 }
 
-.aboutContainer button {
-  margin: 0 auto;
+.loginContainer button {
   text-align: center;
+  margin: 0 auto;
+  margin-top: 1rem;
 }

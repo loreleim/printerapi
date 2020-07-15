@@ -1,4 +1,5 @@
 import React, { PureComponent } from "react";
+import { ReactComponent as NavSVG } from "../../images/drop.svg";
 import { Link } from "react-router-dom";
 import style from "./index.module.scss";
 import firebase from "../../database/firebase";
@@ -25,7 +26,7 @@ export default class Nav extends PureComponent {
     return (
       <div>
         {this.state.isLoggedIn ? (
-          <nav className={style.mainNav}>
+          <nav className={style.userNav}>
             <ul>
               <li>{this.state.message}</li>
               <li>
@@ -35,33 +36,16 @@ export default class Nav extends PureComponent {
                 <Link to={"/order"}>New Order</Link>
               </li>
               <li>
-                <Link to={"/status"}>Workflow</Link>
-              </li>
-              <li>
                 <Link to={"/inventory"}>Settings</Link>
               </li>
             </ul>
           </nav>
         ) : (
-          <nav className={style.mainNav}>
-            <ul>
-              <li>{this.state.message}</li>
-              <li>
-                <Link to={"/"}>Home</Link>
-              </li>
-              <li>
-                <Link to={"/order"}>Order</Link>
-              </li>
-              <li>
-                <Link to={"/status"}>Status</Link>
-              </li>
-              <li>
-                <Link to={"/inventory"}>Inventory</Link>
-              </li>
-              <li>
-                <Link to={"/about"}>About</Link>
-              </li>
-            </ul>
+          <nav
+            className={style.mainNav}
+            onClick={this.props.drawerClickHandler}
+          >
+            <NavSVG className={style.dropNav}></NavSVG>
           </nav>
         )}
       </div>
