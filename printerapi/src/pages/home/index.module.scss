@@ -8,6 +8,7 @@
 
 .homeContainer h1 {
   color: white;
+  margin-bottom: 2rem;
 }
 
 .homeContainer {
@@ -17,8 +18,62 @@
   left: 0%;
   transform: translate(0%, -50%);
   text-align: center;
+  padding: 2rem;
 }
 
 .homeContainer .light {
   background: $lmBackground;
+}
+
+.homeContainer button {
+  width: 20rem;
+  height: 3rem;
+  font-family: museo-sans, sans-serif;
+  font-weight: 900;
+  background-color: transparent;
+  outline: none;
+  border-radius: 4rem;
+  border-style: solid;
+  border-color: $cyan;
+  color: $cyan;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 0.25rem;
+  letter-spacing: 0.15rem;
+  border-width: 1px;
+  cursor: pointer;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.homeContainer button:hover {
+  background-color: $cyan;
+  outline: none;
+  border-radius: 4rem;
+  border-style: solid;
+  border-color: $cyan;
+  color: $dmBackground;
+  transition: 0.2s ease-in-out;
+}
+
+/*Media Queries*/
+/* Larger than tablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+}
+
+/* For TV Screens & Projectors */
+@media (min-width: 2000px) {
 }

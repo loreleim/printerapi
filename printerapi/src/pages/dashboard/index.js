@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./index.module.scss";
 import firebase from "../../database/firebase";
-import EditInventory from "./editinventory";
+import PaperStock from "./paperStock";
 import UserData from "./userdata";
 import AddPaper from "./addpaper";
 import AddUser from "./adduser";
@@ -31,7 +31,7 @@ class Dashboard extends React.Component {
           <h1>Dashboard</h1>
           <UserData></UserData>
           <button onClick={() => firebase.auth().signOut()}>Sign out</button>
-          <EditInventory></EditInventory>
+          <PaperStock></PaperStock>
           {this.state.addPaper && <AddPaper></AddPaper>}
           <button onClick={this.addPaperToggle}>Add New Paper Toggle</button>
           {this.state.on && <AddUser></AddUser>}
