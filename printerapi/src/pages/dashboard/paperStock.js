@@ -49,22 +49,9 @@ export default class PaperStock extends PureComponent {
           <div key={paper.id} className={style.paperCard}>
             <h2>{paper.id}</h2>
             <p className={style.paperDescription}>{paper.description}</p>
-            <p>Reams Available: {paper.reams}</p>
+            <p className={style.paperReams}>Reams Available: {paper.reams}</p>
             <button
-              onClick={
-                (this.AddPaper = () => {
-                  const add = firebase.firestore.FieldValue.increment(1);
-                  const chicken = firebase
-                    .firestore()
-                    .collection("paper")
-                    .doc(paper.id);
-                  chicken.update({ reams: add });
-                })
-              }
-            >
-              Add Ream
-            </button>
-            <button
+              className={style.minusPaper}
               onClick={
                 (this.MinusPaper = () => {
                   const minus = firebase.firestore.FieldValue.increment(-1);
@@ -76,7 +63,22 @@ export default class PaperStock extends PureComponent {
                 })
               }
             >
-              Remove Ream
+              -
+            </button>
+            <button
+              className={style.addPaper}
+              onClick={
+                (this.AddPaper = () => {
+                  const add = firebase.firestore.FieldValue.increment(1);
+                  const chicken = firebase
+                    .firestore()
+                    .collection("paper")
+                    .doc(paper.id);
+                  chicken.update({ reams: add });
+                })
+              }
+            >
+              +
             </button>
             <p>Sheets per Ream: {paper.sheetsPerReam}</p>
             <p>Sheets in Stock: {paper.sheetsPerReam * paper.reams}</p>

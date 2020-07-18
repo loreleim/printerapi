@@ -52,3 +52,55 @@ label {
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
 }
+
+.paperCard button {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 2rem;
+  font-family: museo-sans, sans-serif;
+  font-weight: 900;
+  background-color: transparent;
+  border-style: solid;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.paperCard button:focus {
+  outline: none;
+}
+
+.paperCard .addPaper {
+  border-color: $cyan;
+  color: $cyan;
+}
+
+.paperCard .addPaper:hover {
+  border-color: $cyan;
+  color: $dmBackground;
+  background-color: $cyan;
+  transition: 0.2s ease-in-out;
+}
+
+.paperCard .minusPaper {
+  border-color: $magenta;
+  color: $magenta;
+}
+
+.paperCard .minusPaper:hover {
+  border-color: $magenta;
+  color: $dmBackground;
+  background-color: $magenta;
+  transition: 0.2s ease-in-out;
+}
+
+/*
+  width: 20rem;
+  height: 3rem;
+  font-family: museo-sans, sans-serif;
+  font-weight: 900;
+  background-color: transparent;
+  border-style: solid;
+  border-color: $cyan;
+  color: $cyan;
+*/
