@@ -11,7 +11,7 @@ const Login = ({ history }) => {
       const { email, password } = event.target.elements;
       try {
         firebase.auth().signInWithEmailAndPassword(email.value, password.value);
-        history.push("/");
+        history.push("/dashboard");
       } catch (error) {
         alert(error);
       }
