@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-//import style from "./index.module.scss";
+import style from "./index.module.scss";
 import firebase from "../../database/firebase";
 
 export default class UserData extends PureComponent {
@@ -24,8 +24,8 @@ export default class UserData extends PureComponent {
 
   render() {
     return (
-      <div>
-        <h2>Hi, {this.state.user}</h2>
+      <div className={style.userContainer}>
+        <h1>Hi, {this.state.user}</h1>
       </div>
     );
   }
